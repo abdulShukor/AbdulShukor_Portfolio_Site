@@ -1,45 +1,32 @@
+<!--   enjecting  to the home page header.ejs -->
 
- <!--   enjecting  to the home page header.ejs -->
+<% include ./partials/header.ejs%>
 
-    <% include ./partials/header.ejs%>
-
-    <div class="container">
-      <div class="jumbotron">
-        <h1 class="display-4">Welocome to <%=title%></h1>
-
- <!--  if the title is contact , it will enject the contact.ejs -->
- <% if (title == "Contact") { %>
-          <%include ./contact.ejs%>
-        <% } %>
- <!--  if the title is about, it will enject the about.ejs -->
-
-        <% if (title == "About") { %>
-          <%include ./about.ejs%>
-        <% } %>
- <!--  if the title is projects, it will enject the projects.ejs -->
-
-        <% if (title == "Projects") { %>
-          <%include ./projects.ejs%>
-        <% } %>
- <!--  if the title is services , it will enject the services.ejs -->
-
-        <% if (title == "Services") { %>
-          <%include ./services.ejs%>
-        <% } %>
-
-
-        <p class="lead">
-          Hi my name is abdul shukor.
-        </p>
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Welocome to <%=title%></h1>
 
 
 
+    <!--  if the title is contact , it will enject the contact.ejs -->
+    <% if (title == "Contact") { %> <%include ./contact.ejs%> <% } %>
+    <!--  if the title is about, it will enject the about.ejs -->
 
-        <hr class="my-9" />
-      </div>
-    </div>
+    <% if (title == "About") { %> <%include ./about.ejs%> <% } %>
+    <!--  if the title is projects, it will enject the projects.ejs -->
+
+    <% if (title == "Projects") { %> <%include ./projects.ejs%> <% } %>
+    <!--  if the title is services , it will enject the services.ejs -->
+
+    <% if (title == "Services") { %> <%include ./services.ejs%> <% } %>
+
+    <% if (title == "Home") { %> <%include ./home.ejs%> <% } %>
 
 
- <!--   enjecting  to the home page footer.ejs -->
+    
+  </div>
+</div>
 
-    <% include ./partials/footer.ejs%>
+<!--   enjecting  to the home page footer.ejs -->
+
+<% include ./partials/footer.ejs%>
