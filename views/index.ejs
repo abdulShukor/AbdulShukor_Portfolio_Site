@@ -1,136 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Ejs enjection -->
-    <title><%=title%></title>
-    <!-- We dont need ../node_modules because we already include in the route path-->
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="public/Content/app.css" />
-    <!-- css style -->
-  </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000;">
-      <!-- it should go the route /-->
-     <!-- <a class="navbar-brand" href="/">Abdul Shukor</a>-->
-     <a class="navbar-brand-brand" href="/">
-      <img src="/Assets/images/Abdul.jpg" height="55" width="220"/>
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <% if(title == "Home") { %>
-          <li class="nav-item active"><% } else { %></li>
-          <li class="nav-item">
-            <% } %>
+ <!--   enjecting  to the home page header.ejs -->
 
-            <a class="nav-link" href="/"
-              ><i class="fa fa-lg fa-home"></i> Home
-              <span class="sr-only">(current)</span></a
-            >
-          </li>
+    <% include ./partials/header.ejs%>
 
-          <% if(title=="About"){%>
-          <li class="nav-item active"><%}else {%></li>
-
-          <li class="nav-item">
-            <%} %>
-
-            <a class="nav-link" href="/about"
-              ><i class="fa fa-lg fa-info"></i> About</a
-            >
-          </li>
-
-          <% if(title=="Projects"){%>
-          <li class="nav-item active"><%}else {%></li>
-
-          <li class="nav-item">
-            <%} %>
-
-            <a class="nav-link" href="/Projects"> <i class="fa fa-lg fa-tasks"></i> Projects</a
-            >
-          </li>
-
-          <% if(title=="Services"){%>
-          <li class="nav-item active"><%}else {%></li>
-
-          <li class="nav-item">
-            <%} %>
-            <a class="nav-link" href="/services"
-              ><i class="fa fa-lg fa-birthday-cake"></i> Services</a
-            >
-          </li>
-
-          <% if(title=="Contact"){%>
-          <li class="nav-item active"><%}else {%></li>
-
-          <li class="nav-item">
-            <%} %>
-            <a class="nav-link" href="/contact"
-              ><i class="fa fa-lg fa-phone"></i> Contact</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
     <div class="container">
       <div class="jumbotron">
         <h1 class="display-4">Welocome to <%=title%></h1>
 
+ <!--  if the title is contact , it will enject the contact.ejs -->
+ <% if (title == "Contact") { %>
+          <%include ./contact.ejs%>
+        <% } %>
+ <!--  if the title is about, it will enject the about.ejs -->
+
+        <% if (title == "About") { %>
+          <%include ./about.ejs%>
+        <% } %>
+ <!--  if the title is projects, it will enject the projects.ejs -->
+
+        <% if (title == "Projects") { %>
+          <%include ./projects.ejs%>
+        <% } %>
+ <!--  if the title is services , it will enject the services.ejs -->
+
+        <% if (title == "Services") { %>
+          <%include ./services.ejs%>
+        <% } %>
+
+
         <p class="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
+          Hi my name is abdul shukor.
         </p>
 
-        <hr class="my-4" />
 
-        <p>
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
-        </p>
 
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button"
-            >Learn more</a
-          >
-        </p>
+
+        <hr class="my-9" />
       </div>
     </div>
 
-    
-    <!-- JavaScript -->
-    <!-- We dont need ../node_modules because we already include in the route path-->
-    <script src="jquery/dist/jquery.min.js"></script>
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="Scripts/app.js"></script>
 
-    <footer>
-      <div class="navbar fixed-bottom navbar-dark text-white" style="background-color: #000000;">
-        <div class="container">
+ <!--   enjecting  to the home page footer.ejs -->
 
-      <h6>&copy; Copyright 2019, Abdul Shukor. All Rights Reserved. </h6>
-          <div class="navbar-text pull-right">
-      <a href="https://www.facebook.com" target="_blank" title="Facebook Page" class="fa-lg"><i class="fa fa-facebook-f"></i></a>
-     <a href="https://twitter.com" target="_blank" title="Twitter" class="fa-lg"> <i class="fa fa-lg fa-twitter"></i></a>
-     <a href="https://plus.google.com" target="_blank" title="Google Plus" class="fa-lg"> <i class="fa fa-lg fa-google-plus-square"></i></a>
-     <a href="https://www.linkedin.com" target="_blank" title="Linkedin" class="fa-lg"> <i class="fa  fa-lg fa-linkedin"></i></a>
-         </div>
-       </div>
-      </div>
-    </footer>
-  </body>
-</html>
+    <% include ./partials/footer.ejs%>
