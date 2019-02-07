@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 /* GET about page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About Me' });
+  res.render('index', { title: 'About' });
 });
 
 /* GET projects page. */
@@ -23,7 +23,7 @@ router.get('/services', function(req, res, next) {
 
 /* GET Contact page. */
 router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact Me' });
+  res.render('index', { title: 'Contact' });
 });
 
 
