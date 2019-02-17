@@ -1,3 +1,8 @@
+/* Name: Abdul Shukor
+   StudentID: 300919831
+   Assignment one:
+   Date: Feb-16-2019 */
+
 
 /* Custome javaSript goes here */
 

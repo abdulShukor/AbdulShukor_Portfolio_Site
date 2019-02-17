@@ -3,7 +3,7 @@
 <% include ./partials/header.ejs%>
 
 <div class="container">
-  <div class="jumbotron">
+  <div class="jumbotron ">
     <h1 class="display-4">Welcome to <%=title%> page</h1>
 
 
@@ -18,7 +18,8 @@
     <% if (title == "Projects") { %> <%include ./projects.ejs%> <% } %>
     <!--  if the title is services , it will enject the services.ejs -->
 
-    <% if (title == "Services") { %> <%include ./services.ejs%> <% } %>
+    <% if (title == "Services") { %> <%include ./services.ejs%> <% }
+     %>
 
     <% if (title == "Home") { %> <%include ./home.ejs%> <% } %>
 
